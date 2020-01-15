@@ -20,7 +20,7 @@
 Currently this application is still in development but another version of this application can be seen [here](https://moore-connections.herokuapp.com/)
 
 **NOTE**
-This application uses MongoDB and Heroku. Heroku is set up on the Free Tier and therefor does not have an SSL certificate. Registering and Loggin in should be used with simple passwords that you **do not** use elsewhere. Even though passwords are encrypted you should still take security precautions when loggin in anywhere, not just here.
+This application uses MongoDB and Heroku. Heroku is set up on the Free Tier and therefor does not have an SSL certificate. Registering and Logging in should be used with simple passwords that you **do not** use elsewhere. Even though passwords are encrypted you should still take security precautions when logging in anywhere, not just here.
 
 **In Production an SSL certicate will be set up**
 
