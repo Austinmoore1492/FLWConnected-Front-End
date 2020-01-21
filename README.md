@@ -2,6 +2,8 @@
 
 > Front-End for the FLW Connected Application
 
+Checkout the Landing Page **[here](https://www.flwconnect.org/)** to stay updated on the project. 
+
 ## Project Setup
 
 ```
@@ -16,13 +18,8 @@
 ```
 
 ### Deployment
-
-Currently this application is still in development but another version of this application can be seen [here](https://moore-connections.herokuapp.com/)
-
-**NOTE**
-This application uses MongoDB and Heroku. Heroku is set up on the Free Tier and therefor does not have an SSL certificate. Registering and Logging in should be used with simple passwords that you **do not** use elsewhere. Even though passwords are encrypted you should still take security precautions when logging in anywhere, not just here.
-
-**In Production an SSL certicate will be set up**
+Landing Page-Netlify
+Current Project in Development-Heroku
 
 ## Author
 
