@@ -46,6 +46,12 @@ input {
 	border-radius: 0;
 }
 
+hr {
+	border: 0;
+	height: 3px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 /* Utilities */
 .container {
 	max-width: 1100px;
@@ -592,10 +598,38 @@ button {
 	text-align: center;
 	background: var(--primary-color);
 	color: #f7f7f7;
+	background-image: url('https://images.pexels.com/photos/41161/soldier-uniform-army-weapon-41161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-y: center;
+}
+
+.profile-top::after {
+	content: "";
+	background: rgb(0, 0, 0);
+	background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%);
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(rgba(0, 0, 0, 0.1)),
+		color-stop(60%, rgba(0, 0, 0, 0.8)),
+		to(rgba(0, 0, 0, 1))
+	);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.profile-info {
+	z-index: 1;
 }
 
 .profile-top img {
 	width: 250px;
+	border: 3px solid var(--light-color);
+	border-radius: 50%;
 }
 
 .profile-top .icons a {
@@ -735,7 +769,7 @@ button {
 }
 
 .post img {
-	width: 150px;
+	width: 100px;
 }
 
 .post a,
@@ -751,16 +785,25 @@ button {
 	font-size: 0.8rem;
 }
 
+.post .post-text {
+	text-align: left;
+}
+
 .post .post-date {
+	text-align: left;
 	color: #525252;
 	font-size: 0.8rem;
 	margin-bottom: 0.5rem;
 }
 
+.show-actions {
+	display: flex;
+}
+
 /* Mobile Styles */
 @media (max-width: 750px) {
 	.container {
-		max-width: 90%;
+		max-width: 100%;
 		margin-top: 8rem;
 	}
 
@@ -770,6 +813,10 @@ button {
 
 	.hide-sm {
 		display: none;
+	}
+
+	.form input[type="submit"] {
+		margin-right: 0;
 	}
 
 	/* Text Styles */
@@ -847,6 +894,32 @@ button {
 		text-align: center;
 	}
 
+	.post {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+	}
+
+	.post img {
+		width: 50px;
+	}
+
+	.post-flex a {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+
+	.post-flex h4 {
+		margin-left: 1rem;
+		margin-top: 2rem;
+	}
+
+	.show-actions {
+		justify-content: flex-end;
+	}
+
 	@media (max-width: 750px) {
 		.profile-top {
 			-ms-grid-row: 1;
@@ -888,16 +961,6 @@ button {
 		display: block;
 		width: 100%;
 		margin-bottom: 0.2rem;
-	}
-
-	.post {
-		-ms-grid-columns: 1fr;
-		grid-template-columns: 1fr;
-		grid-gap: 0;
-	}
-
-	.post img {
-		width: 100px;
 	}
 
 	.post a {
@@ -1019,8 +1082,10 @@ button {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.profile-top {
-		background: url("https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
-			no-repeat center center/cover;
+		background-image: url('https://images.pexels.com/photos/41161/soldier-uniform-army-weapon-41161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-y: center;
 	}
 	.profile-top::after {
 		content: "";
